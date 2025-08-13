@@ -49,7 +49,7 @@ def setup_agent():
     # Initialize Groq LLM with API key and model
     llm = ChatGroq(
         temperature=0,  # Deterministic output
-        model_name="gemma2-9b-it",  # Model hosted by Groq
+        model_name="llama-3.1-8b-instant",  # Model hosted by Groq
         api_key=os.getenv("GROQ_API_KEY_SQL")  # Load from .env
     )
 
@@ -107,3 +107,4 @@ if user_query:
         except Exception as e:
             # Show error if anything goes wrong
             st.error(f"❌ Error: {e}")
+
